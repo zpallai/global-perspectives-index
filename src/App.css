@@ -1,38 +1,99 @@
+/* App Styles */
+
+body {
+  font-family:'Roboto', monospace;
+  background-color: #113e663b;
+}
+
+body > iframe
+{
+    display: none;
+}
+
 .App {
+  text-align: start;
+}
+
+.Title {
+  font-size: 2rem;
+  margin: 3rem 0rem 0rem 0rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Sections {
+  margin: 4rem 0rem 0rem 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Table {
+  margin: 2rem 0rem 0rem 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+table {
+  width: 100%
+}
+
+th {
+  text-align: start;
+}
+
+tr {
+  height: 40px;
+}
+
+.country-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.country-info {
+  display: grid;
+  /* flex-grow: 1; */
+  row-gap: 5px;
+  grid-template-areas: 
+  'country-name country-flag'
+  'country-plot country-plot';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-name {
+  grid-area: country-name;
+  font-size: 2rem;
+  margin: auto 1rem;
 }
+
+.country-flag {
+  grid-area: country-flag;
+  justify-self: end;
+  margin-top: 0.4rem;
+  width: 80px;
+}
+
+.country-plot {
+  grid-area: country-plot;
+}
+
+.country-score {
+  grid-area: country-score;
+  font-size: 2rem;
+  margin: auto;
+}
+
+.country-indexes {
+  flex-grow: 1;
+  font-size: 1.3rem;
+  margin: 1rem 0rem 0rem 3rem;
+  line-height: 50px;
+}
+
+hr {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+/* eslint-disable react/no-direct-mutation-state */
+import React, { useState } from 'react';
 import './App.css';
+import Table from './Table.js';
+import Country from './Country';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='App'>
+        <Title />
+        <div className='Sections'>
+          <p>+ About</p>
+          <p>+ Country in Detail</p>
+            <Country />
+          <p>+ Rankings</p>
+        </div>
+        <Table />
+      </div>
+    </>
+  );
+
+}
+
+function Title() {
+  return (
+  <div className='Title'> 
+    <p>
+      Global Perspectives Index
+    </p>
+  </div>
   );
 }
 
+
 export default App;
+
