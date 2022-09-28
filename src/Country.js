@@ -1,5 +1,7 @@
 // Country Detail Box
 
+import React from 'react';
+
 function Country() {
   return (
 
@@ -35,7 +37,6 @@ function Country() {
               <td>Unemployment</td>
               <td>88</td>
             </tr>
-            <hr></hr>
             <tr>
               <td>Index</td>
               <td>83</td>

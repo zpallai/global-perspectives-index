@@ -1,8 +1,9 @@
-/* eslint-disable react/no-direct-mutation-state */
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Table from './Table.js';
 import Country from './Country';
+import CreateIndex from './Index_Object';
+import { cpi } from './CPI';
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
         </div>
         <Table />
       </div>
+      <CreateIndex />
     </>
   );
-
 }
 
 function Title() {

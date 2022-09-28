@@ -40,6 +40,10 @@ tr {
   height: 40px;
 }
 
+thead tr th {
+  width: 100px;
+}
+
 .country-container {
   display: flex;
   justify-content: space-between;
