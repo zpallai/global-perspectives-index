@@ -65,7 +65,7 @@ function CreateIndexes() {
     console.log(Indexes);
 
 
-export default CreateIndexes;
+// export default CreateIndexes;
 
 
 

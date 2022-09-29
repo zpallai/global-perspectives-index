@@ -1,4 +1,4 @@
-export const gini = [
+var gini = [
     {
         "LOCATION": "AUS",
         "INDICATOR": "INCOMEINEQ",

@@ -54,9 +54,7 @@ for (var y = 0; y < table_rows_countries.length; y++) {
 
 console.log(cli_array);
 
-
 // cpi array
-
 
 function CPI_object(id, title, cpi) {
   this.id = id;
@@ -80,10 +78,31 @@ if (country_first != country_next)
 }
 };
 
-
 console.log(cpi_array);
 
+// gini array
 
+function GINI_object(id, gini) {
+  this.id = id;
+  this.gini = gini;
+}
+
+var gini_array = [];
+
+for (var x = 0; x < gini.length - 1; x++) 
+{
+var country_first = gini[x]['LOCATION'];
+var country_next = gini[x + 1]['LOCATION'];
+if (country_first != country_next) 
+{
+  var id = country_first;
+  var gini_index = gini[x]['Value'];
+  var country = new GINI_object(id, gini_index);
+  gini_array.push(country);
+}
+};
+
+console.log(gini_array);
 
 
 

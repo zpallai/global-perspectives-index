@@ -5,10 +5,10 @@ body {
   background-color: #113e663b;
 }
 
-body > iframe
+/* body > iframe
 {
     display: none;
-}
+} */
 
 .App {
   text-align: start;

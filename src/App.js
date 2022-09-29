@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Table from './Table.js';
 import Country from './Country';
-import CreateIndex from './Index_Object';
 import { cpi } from './CPI';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         </div>
         <Table />
       </div>
-      <CreateIndex />
     </>
   );
 }

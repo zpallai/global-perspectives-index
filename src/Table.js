@@ -1,40 +1,39 @@
 // Table
 import React, { useMemo, useState, useEffect, useFlexLayout } from "react";
 import TableTemplate from "./TableTemplate"
-import { cpi } from './CPI';
+import { composite } from './Composite';
 
 function Table() {
-  // console.log(cpi);
 
   const columns = useMemo(
     () => [
       {
-        Header: "Data",
+        Header: "Composite Index",
         columns: [
           {
-            Header: "Country Name",
-            accessor: "Country Name",
+            Header: "Country",
+            accessor: "title",
             width: 100
           },
           {
-            Header: "Indicator",
-            accessor: "Indicator"
+            Header: "Corruption",
+            accessor: "corruption"
           },
           {
-            Header: "2012",
-            accessor: "2012"
+            Header: "Economy",
+            accessor: "economy"
           },
           {
-            Header: "2013",
-            accessor: "2013"
+            Header: "Inequality",
+            accessor: "inequality"
           },
           {
-            Header: "2014",
-            accessor: "2014"
+            Header: "Unemployment",
+            accessor: "unemployment"
           }
           ,     {
-            Header: "2015",
-            accessor: "2015"
+            Header: "Index",
+            accessor: "id"
           }
         ]
       },
@@ -45,7 +44,7 @@ function Table() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    setData(cpi);
+    setData(composite);
   }, []);
 
   return (
