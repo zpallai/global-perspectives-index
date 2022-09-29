@@ -55,7 +55,33 @@ for (var y = 0; y < table_rows_countries.length; y++) {
 console.log(cli_array);
 
 
+// cpi array
 
+
+function CPI_object(id, title, cpi) {
+  this.id = id;
+  this.title = title;
+  this.cpi = cpi;
+}
+
+var cpi_array = [];
+
+for (var x = 0; x < cpi.length - 1; x++) 
+{
+var country_first = cpi[x]['Country ISO3'];
+var country_next = cpi[x + 1]['Country ISO3'];
+if (country_first != country_next) 
+{
+  var id = country_first;
+  var title = cpi[x]['Country Name'];
+  var cpi_index = cpi[x]['2020'];
+  var country = new CPI_object(id, title, cpi_index);
+  cpi_array.push(country);
+}
+};
+
+
+console.log(cpi_array);
 
 
 
