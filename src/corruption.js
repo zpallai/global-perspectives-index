@@ -1,6 +1,6 @@
 // Corruption Perceptions Index (CPI( 
 
-var cpi = [
+var corruption = [
     {
       "id": "AFG",
       "title": "Afghanistan",
