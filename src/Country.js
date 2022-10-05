@@ -3,10 +3,11 @@
 import React from 'react';
 
 function Country() {
+
   return (
 
     <div className="country-container">
-      <div className="country-info">
+      <div id="country-things" className="country-info">
         <p className="country-name">Bahrain</p>
         <div className="country-flag">
           <img src="https://flagicons.lipis.dev/flags/4x3/bh.svg">

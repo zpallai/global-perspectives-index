@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTable, useFilters, useSortBy } from "react-table";
+import { useTable, useFilters, useSortBy, getHeaderProps } from "react-table";
 
 export default function TableTemplate({ columns, data }) {
   const [filterInput, setFilterInput] = useState("");
@@ -27,7 +27,7 @@ export default function TableTemplate({ columns, data }) {
 
   const handleFilterChange = e => {
     const value = e.target.value || undefined;
-    setFilter("2012", value);
+    setFilter("title", value);
     setFilterInput(value);
   };
 
@@ -35,9 +35,10 @@ export default function TableTemplate({ columns, data }) {
   return (
     <>
       <input
+        id="table-search"
         value={filterInput}
         onChange={handleFilterChange}
-        placeholder={"Search name"}
+        placeholder={"Filter countries"}
       />
       <table {...getTableProps()}>
         <thead>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Table from './Table.js';
-import Country from './Country';
+import About from './About';
 import { cpi } from './CPI';
 
 function App() {
@@ -10,12 +10,9 @@ function App() {
       <div className='App'>
         <Title />
         <div className='Sections'>
-          <p>+ About</p>
-          <p>+ Country in Detail</p>
-            <Country />
-          <p>+ Rankings</p>
+          <About />
+          <Table />
         </div>
-        <Table />
       </div>
     </>
   );
@@ -24,9 +21,10 @@ function App() {
 function Title() {
   return (
   <div className='Title'> 
-    <p>
+    <p id="title-text">
       Global Perspectives Index
     </p>
+    <hr id="title-line"></hr>
   </div>
   );
 }

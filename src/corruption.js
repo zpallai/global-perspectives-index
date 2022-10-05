@@ -1,4 +1,4 @@
-// Corruption Perceptions Index (CPI( 
+// Corruption Perceptions Index (CPI)
 
 var corruption = [
     {

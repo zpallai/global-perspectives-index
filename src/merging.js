@@ -2254,10 +2254,17 @@
         
   console.log(arrayList);
 
+Slovenia: 336
+Malta: 324
+Netherlands: 320
 
-
-
-
+Congo: 20
+Haiti: 50
+Angola: 68
+Comoros: 72
+Yemen: 72
+CAR: 78
+Sundan: 80
 
 
 

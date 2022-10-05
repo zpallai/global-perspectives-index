@@ -7,9 +7,6 @@ function Table() {
 
   const columns = useMemo(
     () => [
-      {
-        Header: "Composite Index",
-        columns: [
           {
             Header: "Country",
             accessor: "title",
@@ -31,14 +28,12 @@ function Table() {
             Header: "Unemployment",
             accessor: "unemployment"
           }
-          ,     {
+          ,     
+          {
             Header: "Index",
-            accessor: "id"
+            accessor: "index"
           }
         ]
-      },
-    ],
-    []
   );
 
   const [data, setData] = useState([]);
@@ -48,7 +43,7 @@ function Table() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="GPI-table">
       <TableTemplate columns={columns} data={data} />
     </div>
   );

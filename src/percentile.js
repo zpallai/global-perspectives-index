@@ -1,6 +1,6 @@
-// Composite Index
+// Find percentile of value in array 
 
-export const composite = [
+var composite = [
   {
     "id": "AGO",
     "title": "Angola",
@@ -8,7 +8,7 @@ export const composite = [
     "economy": 9,
     "inequality": 6,
     "unemployment": 36,
-    "index": 2
+    "index": 16
   },
   {
     "id": "ALB",
@@ -17,7 +17,7 @@ export const composite = [
     "economy": 85,
     "inequality": 79,
     "unemployment": 22,
-    "index": 63
+    "index": 56
   },
   {
     "id": "ARE",
@@ -26,7 +26,7 @@ export const composite = [
     "economy": 2,
     "inequality": 95,
     "unemployment": 88,
-    "index": 85
+    "index": 68
   },
   {
     "id": "ARG",
@@ -35,7 +35,7 @@ export const composite = [
     "economy": 88,
     "inequality": 25,
     "unemployment": 26,
-    "index": 49
+    "index": 53
   },
   {
     "id": "ARM",
@@ -44,7 +44,7 @@ export const composite = [
     "economy": 64,
     "inequality": 98,
     "unemployment": 6,
-    "index": 70
+    "index": 63
   },
   {
     "id": "AUS",
@@ -53,7 +53,7 @@ export const composite = [
     "economy": 12,
     "inequality": 62,
     "unemployment": 64,
-    "index": 68
+    "index": 62
   },
   {
     "id": "AUT",
@@ -62,7 +62,7 @@ export const composite = [
     "economy": 50,
     "inequality": 82,
     "unemployment": 53,
-    "index": 86
+    "index": 73
   },
   {
     "id": "AZE",
@@ -71,7 +71,7 @@ export const composite = [
     "economy": 61,
     "inequality": 94,
     "unemployment": 49,
-    "index": 66
+    "index": 53
   },
   {
     "id": "BDI",
@@ -80,7 +80,7 @@ export const composite = [
     "economy": 16,
     "inequality": 38,
     "unemployment": 96,
-    "index": 23
+    "index": 30
   },
   {
     "id": "BEL",
@@ -89,7 +89,7 @@ export const composite = [
     "economy": 69,
     "inequality": 93,
     "unemployment": 51,
-    "index": 94
+    "index": 79
   },
   {
     "id": "BEN",
@@ -98,7 +98,7 @@ export const composite = [
     "economy": 70,
     "inequality": 42,
     "unemployment": 97,
-    "index": 82
+    "index": 64
   },
   {
     "id": "BFA",
@@ -107,7 +107,7 @@ export const composite = [
     "economy": 72,
     "inequality": 12,
     "unemployment": 71,
-    "index": 54
+    "index": 52
   },
   {
     "id": "BGD",
@@ -116,7 +116,7 @@ export const composite = [
     "economy": 73,
     "inequality": 73,
     "unemployment": 62,
-    "index": 62
+    "index": 50
   },
   {
     "id": "BGR",
@@ -134,7 +134,7 @@ export const composite = [
     "economy": 76,
     "inequality": 68,
     "unemployment": 14,
-    "index": 47
+    "index": 49
   },
   {
     "id": "BLR",
@@ -143,7 +143,7 @@ export const composite = [
     "economy": 21,
     "inequality": 99,
     "unemployment": 72,
-    "index": 80
+    "index": 63
   },
   {
     "id": "BOL",
@@ -152,7 +152,7 @@ export const composite = [
     "economy": 68,
     "inequality": 20,
     "unemployment": 37,
-    "index": 23
+    "index": 38
   },
   {
     "id": "BRA",
@@ -161,7 +161,7 @@ export const composite = [
     "economy": 52,
     "inequality": 9,
     "unemployment": 17,
-    "index": 13
+    "index": 35
   },
   {
     "id": "BTN",
@@ -179,7 +179,7 @@ export const composite = [
     "economy": 93,
     "inequality": 6,
     "unemployment": 2,
-    "index": 37
+    "index": 54
   },
   {
     "id": "CAF",
@@ -188,7 +188,7 @@ export const composite = [
     "economy": 10,
     "inequality": 3,
     "unemployment": 50,
-    "index": 4
+    "index": 17
   },
   {
     "id": "CAN",
@@ -197,7 +197,7 @@ export const composite = [
     "economy": 51,
     "inequality": 66,
     "unemployment": 42,
-    "index": 76
+    "index": 68
   },
   {
     "id": "CHE",
@@ -206,7 +206,7 @@ export const composite = [
     "economy": 37,
     "inequality": 67,
     "unemployment": 61,
-    "index": 81
+    "index": 70
   },
   {
     "id": "CHL",
@@ -224,7 +224,7 @@ export const composite = [
     "economy": 82,
     "inequality": 40,
     "unemployment": 69,
-    "index": 74
+    "index": 62
   },
   {
     "id": "CIV",
@@ -233,7 +233,7 @@ export const composite = [
     "economy": 75,
     "inequality": 45,
     "unemployment": 86,
-    "index": 73
+    "index": 58
   },
   {
     "id": "CMR",
@@ -242,7 +242,7 @@ export const composite = [
     "economy": 33,
     "inequality": 13,
     "unemployment": 82,
-    "index": 18
+    "index": 29
   },
   {
     "id": "COD",
@@ -251,7 +251,7 @@ export const composite = [
     "economy": 65,
     "inequality": 26,
     "unemployment": 58,
-    "index": 22
+    "index": 33
   },
   {
     "id": "COG",
@@ -260,7 +260,7 @@ export const composite = [
     "economy": 3,
     "inequality": 9,
     "unemployment": 4,
-    "index": 0
+    "index": 5
   },
   {
     "id": "COL",
@@ -269,7 +269,7 @@ export const composite = [
     "economy": 90,
     "inequality": 4,
     "unemployment": 18,
-    "index": 27
+    "index": 45
   },
   {
     "id": "COM",
@@ -278,7 +278,7 @@ export const composite = [
     "economy": 20,
     "inequality": 16,
     "unemployment": 30,
-    "index": 3
+    "index": 16
   },
   {
     "id": "CPV",
@@ -287,7 +287,7 @@ export const composite = [
     "economy": 74,
     "inequality": 23,
     "unemployment": 14,
-    "index": 43
+    "index": 55
   },
   {
     "id": "CRI",
@@ -296,7 +296,7 @@ export const composite = [
     "economy": 81,
     "inequality": 8,
     "unemployment": 9,
-    "index": 34
+    "index": 52
   },
   {
     "id": "CYP",
@@ -305,7 +305,7 @@ export const composite = [
     "economy": 60,
     "inequality": 78,
     "unemployment": 54,
-    "index": 84
+    "index": 69
   },
   {
     "id": "CZE",
@@ -314,7 +314,7 @@ export const composite = [
     "economy": 30,
     "inequality": 97,
     "unemployment": 89,
-    "index": 90
+    "index": 71
   },
   {
     "id": "DEU",
@@ -323,7 +323,7 @@ export const composite = [
     "economy": 24,
     "inequality": 76,
     "unemployment": 84,
-    "index": 87
+    "index": 72
   },
   {
     "id": "DJI",
@@ -332,7 +332,7 @@ export const composite = [
     "economy": 47,
     "inequality": 28,
     "unemployment": 1,
-    "index": 9
+    "index": 24
   },
   {
     "id": "DNK",
@@ -341,7 +341,7 @@ export const composite = [
     "economy": 53,
     "inequality": 91,
     "unemployment": 70,
-    "index": 97
+    "index": 81
   },
   {
     "id": "DOM",
@@ -350,7 +350,7 @@ export const composite = [
     "economy": 94,
     "inequality": 34,
     "unemployment": 38,
-    "index": 42
+    "index": 44
   },
   {
     "id": "DZA",
@@ -359,7 +359,7 @@ export const composite = [
     "economy": 39,
     "inequality": 92,
     "unemployment": 21,
-    "index": 45
+    "index": 48
   },
   {
     "id": "ECU",
@@ -368,7 +368,7 @@ export const composite = [
     "economy": 45,
     "inequality": 12,
     "unemployment": 50,
-    "index": 24
+    "index": 41
   },
   {
     "id": "EGY",
@@ -377,7 +377,7 @@ export const composite = [
     "economy": 28,
     "inequality": 76,
     "unemployment": 31,
-    "index": 31
+    "index": 40
   },
   {
     "id": "ESP",
@@ -395,7 +395,7 @@ export const composite = [
     "economy": 84,
     "inequality": 79,
     "unemployment": 52,
-    "index": 95
+    "index": 80
   },
   {
     "id": "ETH",
@@ -404,7 +404,7 @@ export const composite = [
     "economy": 62,
     "inequality": 57,
     "unemployment": 83,
-    "index": 74
+    "index": 59
   },
   {
     "id": "FIN",
@@ -413,7 +413,7 @@ export const composite = [
     "economy": 32,
     "inequality": 91,
     "unemployment": 42,
-    "index": 81
+    "index": 70
   },
   {
     "id": "FRA",
@@ -422,7 +422,7 @@ export const composite = [
     "economy": 74,
     "inequality": 73,
     "unemployment": 38,
-    "index": 84
+    "index": 72
   },
   {
     "id": "GAB",
@@ -431,7 +431,7 @@ export const composite = [
     "economy": 14,
     "inequality": 41,
     "unemployment": 4,
-    "index": 7
+    "index": 22
   },
   {
     "id": "GBR",
@@ -440,7 +440,7 @@ export const composite = [
     "economy": 80,
     "inequality": 56,
     "unemployment": 74,
-    "index": 94
+    "index": 79
   },
   {
     "id": "GEO",
@@ -449,7 +449,7 @@ export const composite = [
     "economy": 89,
     "inequality": 60,
     "unemployment": 27,
-    "index": 76
+    "index": 67
   },
   {
     "id": "GHA",
@@ -458,7 +458,7 @@ export const composite = [
     "economy": 60,
     "inequality": 21,
     "unemployment": 72,
-    "index": 58
+    "index": 54
   },
   {
     "id": "GIN",
@@ -467,7 +467,7 @@ export const composite = [
     "economy": 27,
     "inequality": 84,
     "unemployment": 52,
-    "index": 38
+    "index": 41
   },
   {
     "id": "GMB",
@@ -476,7 +476,7 @@ export const composite = [
     "economy": 62,
     "inequality": 50,
     "unemployment": 26,
-    "index": 36
+    "index": 46
   },
   {
     "id": "GNB",
@@ -485,7 +485,7 @@ export const composite = [
     "economy": 38,
     "inequality": 59,
     "unemployment": 46,
-    "index": 19
+    "index": 31
   },
   {
     "id": "GRC",
@@ -494,7 +494,7 @@ export const composite = [
     "economy": 84,
     "inequality": 67,
     "unemployment": 15,
-    "index": 70
+    "index": 63
   },
   {
     "id": "GTM",
@@ -503,7 +503,7 @@ export const composite = [
     "economy": 80,
     "inequality": 10,
     "unemployment": 84,
-    "index": 40
+    "index": 41
   },
   {
     "id": "GUY",
@@ -512,7 +512,7 @@ export const composite = [
     "economy": 99,
     "inequality": 16,
     "unemployment": 11,
-    "index": 37
+    "index": 50
   },
   {
     "id": "HND",
@@ -521,7 +521,7 @@ export const composite = [
     "economy": 96,
     "inequality": 11,
     "unemployment": 36,
-    "index": 21
+    "index": 35
   },
   {
     "id": "HRV",
@@ -530,7 +530,7 @@ export const composite = [
     "economy": 90,
     "inequality": 88,
     "unemployment": 34,
-    "index": 87
+    "index": 71
   },
   {
     "id": "HTI",
@@ -539,7 +539,7 @@ export const composite = [
     "economy": 5,
     "inequality": 29,
     "unemployment": 13,
-    "index": 1
+    "index": 11
   },
   {
     "id": "HUN",
@@ -548,7 +548,7 @@ export const composite = [
     "economy": 76,
     "inequality": 83,
     "unemployment": 78,
-    "index": 93
+    "index": 73
   },
   {
     "id": "IDN",
@@ -557,7 +557,7 @@ export const composite = [
     "economy": 36,
     "inequality": 42,
     "unemployment": 75,
-    "index": 48
+    "index": 47
   },
   {
     "id": "IND",
@@ -566,7 +566,7 @@ export const composite = [
     "economy": 86,
     "inequality": 52,
     "unemployment": 55,
-    "index": 72
+    "index": 61
   },
   {
     "id": "IRL",
@@ -575,7 +575,7 @@ export const composite = [
     "economy": 97,
     "inequality": 81,
     "unemployment": 48,
-    "index": 98
+    "index": 82
   },
   {
     "id": "IRN",
@@ -584,7 +584,7 @@ export const composite = [
     "economy": 16,
     "inequality": 30,
     "unemployment": 25,
-    "index": 6
+    "index": 19
   },
   {
     "id": "IRQ",
@@ -593,7 +593,7 @@ export const composite = [
     "economy": 24,
     "inequality": 85,
     "unemployment": 18,
-    "index": 16
+    "index": 29
   },
   {
     "id": "ISL",
@@ -602,7 +602,7 @@ export const composite = [
     "economy": 38,
     "inequality": 94,
     "unemployment": 59,
-    "index": 89
+    "index": 73
   },
   {
     "id": "ISR",
@@ -611,7 +611,7 @@ export const composite = [
     "economy": 83,
     "inequality": 38,
     "unemployment": 66,
-    "index": 83
+    "index": 70
   },
   {
     "id": "ITA",
@@ -620,7 +620,7 @@ export const composite = [
     "economy": 71,
     "inequality": 55,
     "unemployment": 29,
-    "index": 64
+    "index": 61
   },
   {
     "id": "JAM",
@@ -629,7 +629,7 @@ export const composite = [
     "economy": 52,
     "inequality": 14,
     "unemployment": 32,
-    "index": 26
+    "index": 45
   },
   {
     "id": "JOR",
@@ -638,7 +638,7 @@ export const composite = [
     "economy": 18,
     "inequality": 65,
     "unemployment": 8,
-    "index": 26
+    "index": 45
   },
   {
     "id": "JPN",
@@ -647,7 +647,7 @@ export const composite = [
     "economy": 15,
     "inequality": 69,
     "unemployment": 90,
-    "index": 82
+    "index": 67
   },
   {
     "id": "KAZ",
@@ -656,7 +656,7 @@ export const composite = [
     "economy": 41,
     "inequality": 90,
     "unemployment": 68,
-    "index": 72
+    "index": 58
   },
   {
     "id": "KGZ",
@@ -665,7 +665,7 @@ export const composite = [
     "economy": 34,
     "inequality": 88,
     "unemployment": 33,
-    "index": 39
+    "index": 43
   },
   {
     "id": "KOR",
@@ -674,7 +674,7 @@ export const composite = [
     "economy": 42,
     "inequality": 77,
     "unemployment": 85,
-    "index": 90
+    "index": 72
   },
   {
     "id": "LAO",
@@ -683,7 +683,7 @@ export const composite = [
     "economy": 22,
     "inequality": 37,
     "unemployment": 98,
-    "index": 36
+    "index": 39
   },
   {
     "id": "LBN",
@@ -692,7 +692,7 @@ export const composite = [
     "economy": 1,
     "inequality": 75,
     "unemployment": 16,
-    "index": 10
+    "index": 23
   },
   {
     "id": "LBR",
@@ -701,7 +701,7 @@ export const composite = [
     "economy": 42,
     "inequality": 54,
     "unemployment": 78,
-    "index": 46
+    "index": 43
   },
   {
     "id": "LCA",
@@ -710,7 +710,7 @@ export const composite = [
     "economy": 70,
     "inequality": 7,
     "unemployment": 10,
-    "index": 28
+    "index": 48
   },
   {
     "id": "LKA",
@@ -719,7 +719,7 @@ export const composite = [
     "economy": 36,
     "inequality": 36,
     "unemployment": 60,
-    "index": 35
+    "index": 44
   },
   {
     "id": "LSO",
@@ -728,7 +728,7 @@ export const composite = [
     "economy": 10,
     "inequality": 17,
     "unemployment": 3,
-    "index": 8
+    "index": 27
   },
   {
     "id": "LTU",
@@ -737,7 +737,7 @@ export const composite = [
     "economy": 57,
     "inequality": 54,
     "unemployment": 39,
-    "index": 67
+    "index": 62
   },
   {
     "id": "LUX",
@@ -746,7 +746,7 @@ export const composite = [
     "economy": 72,
     "inequality": 63,
     "unemployment": 62,
-    "index": 91
+    "index": 77
   },
   {
     "id": "LVA",
@@ -755,7 +755,7 @@ export const composite = [
     "economy": 50,
     "inequality": 60,
     "unemployment": 41,
-    "index": 65
+    "index": 61
   },
   {
     "id": "MAR",
@@ -764,7 +764,7 @@ export const composite = [
     "economy": 77,
     "inequality": 35,
     "unemployment": 24,
-    "index": 42
+    "index": 50
   },
   {
     "id": "MDA",
@@ -773,7 +773,7 @@ export const composite = [
     "economy": 98,
     "inequality": 95,
     "unemployment": 81,
-    "index": 96
+    "index": 71
   },
   {
     "id": "MDG",
@@ -782,7 +782,7 @@ export const composite = [
     "economy": 49,
     "inequality": 22,
     "unemployment": 92,
-    "index": 33
+    "index": 37
   },
   {
     "id": "MDV",
@@ -791,7 +791,7 @@ export const composite = [
     "economy": 100,
     "inequality": 86,
     "unemployment": 54,
-    "index": 93
+    "index": 74
   },
   {
     "id": "MEX",
@@ -800,7 +800,7 @@ export const composite = [
     "economy": 54,
     "inequality": 15,
     "unemployment": 76,
-    "index": 33
+    "index": 40
   },
   {
     "id": "MKD",
@@ -809,7 +809,7 @@ export const composite = [
     "economy": 40,
     "inequality": 68,
     "unemployment": 12,
-    "index": 24
+    "index": 40
   },
   {
     "id": "MLI",
@@ -818,7 +818,7 @@ export const composite = [
     "economy": 26,
     "inequality": 49,
     "unemployment": 40,
-    "index": 18
+    "index": 33
   },
   {
     "id": "MLT",
@@ -827,7 +827,7 @@ export const composite = [
     "economy": 87,
     "inequality": 78,
     "unemployment": 86,
-    "index": 99
+    "index": 80
   },
   {
     "id": "MMR",
@@ -836,7 +836,7 @@ export const composite = [
     "economy": 0,
     "inequality": 80,
     "unemployment": 94,
-    "index": 46
+    "index": 41
   },
   {
     "id": "MNE",
@@ -854,7 +854,7 @@ export const composite = [
     "economy": 12,
     "inequality": 72,
     "unemployment": 45,
-    "index": 30
+    "index": 40
   },
   {
     "id": "MOZ",
@@ -863,7 +863,7 @@ export const composite = [
     "economy": 18,
     "inequality": 5,
     "unemployment": 80,
-    "index": 11
+    "index": 24
   },
   {
     "id": "MRT",
@@ -872,7 +872,7 @@ export const composite = [
     "economy": 19,
     "inequality": 72,
     "unemployment": 24,
-    "index": 17
+    "index": 33
   },
   {
     "id": "MUS",
@@ -881,7 +881,7 @@ export const composite = [
     "economy": 43,
     "inequality": 47,
     "unemployment": 43,
-    "index": 53
+    "index": 55
   },
   {
     "id": "MWI",
@@ -890,7 +890,7 @@ export const composite = [
     "economy": 23,
     "inequality": 39,
     "unemployment": 46,
-    "index": 16
+    "index": 32
   },
   {
     "id": "MYS",
@@ -908,7 +908,7 @@ export const composite = [
     "economy": 20,
     "inequality": 1,
     "unemployment": 5,
-    "index": 10
+    "index": 32
   },
   {
     "id": "NER",
@@ -917,7 +917,7 @@ export const composite = [
     "economy": 11,
     "inequality": 44,
     "unemployment": 100,
-    "index": 40
+    "index": 41
   },
   {
     "id": "NGA",
@@ -926,7 +926,7 @@ export const composite = [
     "economy": 35,
     "inequality": 56,
     "unemployment": 30,
-    "index": 15
+    "index": 30
   },
   {
     "id": "NIC",
@@ -935,7 +935,7 @@ export const composite = [
     "economy": 88,
     "inequality": 14,
     "unemployment": 56,
-    "index": 30
+    "index": 37
   },
   {
     "id": "NLD",
@@ -944,7 +944,7 @@ export const composite = [
     "economy": 58,
     "inequality": 87,
     "unemployment": 79,
-    "index": 98
+    "index": 82
   },
   {
     "id": "NOR",
@@ -953,7 +953,7 @@ export const composite = [
     "economy": 40,
     "inequality": 91,
     "unemployment": 67,
-    "index": 92
+    "index": 76
   },
   {
     "id": "NPL",
@@ -962,7 +962,7 @@ export const composite = [
     "economy": 46,
     "inequality": 70,
     "unemployment": 65,
-    "index": 58
+    "index": 50
   },
   {
     "id": "PAK",
@@ -971,7 +971,7 @@ export const composite = [
     "economy": 67,
     "inequality": 84,
     "unemployment": 76,
-    "index": 78
+    "index": 58
   },
   {
     "id": "PAN",
@@ -980,7 +980,7 @@ export const composite = [
     "economy": 98,
     "inequality": 8,
     "unemployment": 22,
-    "index": 29
+    "index": 43
   },
   {
     "id": "PER",
@@ -989,7 +989,7 @@ export const composite = [
     "economy": 96,
     "inequality": 18,
     "unemployment": 68,
-    "index": 65
+    "index": 57
   },
   {
     "id": "PHL",
@@ -998,7 +998,7 @@ export const composite = [
     "economy": 64,
     "inequality": 25,
     "unemployment": 92,
-    "index": 60
+    "index": 50
   },
   {
     "id": "PNG",
@@ -1007,7 +1007,7 @@ export const composite = [
     "economy": 13,
     "inequality": 27,
     "unemployment": 90,
-    "index": 19
+    "index": 31
   },
   {
     "id": "POL",
@@ -1016,7 +1016,7 @@ export const composite = [
     "economy": 66,
     "inequality": 82,
     "unemployment": 87,
-    "index": 96
+    "index": 77
   },
   {
     "id": "PRT",
@@ -1025,7 +1025,7 @@ export const composite = [
     "economy": 56,
     "inequality": 70,
     "unemployment": 48,
-    "index": 79
+    "index": 67
   },
   {
     "id": "PRY",
@@ -1034,7 +1034,7 @@ export const composite = [
     "economy": 44,
     "inequality": 21,
     "unemployment": 44,
-    "index": 14
+    "index": 30
   },
   {
     "id": "ROU",
@@ -1043,7 +1043,7 @@ export const composite = [
     "economy": 66,
     "inequality": 59,
     "unemployment": 63,
-    "index": 75
+    "index": 63
   },
   {
     "id": "RUS",
@@ -1052,7 +1052,7 @@ export const composite = [
     "economy": 55,
     "inequality": 50,
     "unemployment": 66,
-    "index": 49
+    "index": 45
   },
   {
     "id": "RWA",
@@ -1061,7 +1061,7 @@ export const composite = [
     "economy": 92,
     "inequality": 19,
     "unemployment": 96,
-    "index": 89
+    "index": 71
   },
   {
     "id": "SDN",
@@ -1070,7 +1070,7 @@ export const composite = [
     "economy": 8,
     "inequality": 63,
     "unemployment": 7,
-    "index": 4
+    "index": 17
   },
   {
     "id": "SEN",
@@ -1079,7 +1079,7 @@ export const composite = [
     "economy": 68,
     "inequality": 40,
     "unemployment": 82,
-    "index": 78
+    "index": 63
   },
   {
     "id": "SLB",
@@ -1088,7 +1088,7 @@ export const composite = [
     "economy": 7,
     "inequality": 46,
     "unemployment": 99,
-    "index": 57
+    "index": 50
   },
   {
     "id": "SLE",
@@ -1097,7 +1097,7 @@ export const composite = [
     "economy": 26,
     "inequality": 52,
     "unemployment": 60,
-    "index": 32
+    "index": 40
   },
   {
     "id": "SLV",
@@ -1106,7 +1106,7 @@ export const composite = [
     "economy": 91,
     "inequality": 37,
     "unemployment": 56,
-    "index": 62
+    "index": 55
   },
   {
     "id": "SOM",
@@ -1115,7 +1115,7 @@ export const composite = [
     "economy": 29,
     "inequality": 47,
     "unemployment": 6,
-    "index": 6
+    "index": 18
   },
   {
     "id": "SRB",
@@ -1124,7 +1124,7 @@ export const composite = [
     "economy": 78,
     "inequality": 60,
     "unemployment": 23,
-    "index": 54
+    "index": 53
   },
   {
     "id": "STP",
@@ -1133,7 +1133,7 @@ export const composite = [
     "economy": 17,
     "inequality": 31,
     "unemployment": 12,
-    "index": 14
+    "index": 37
   },
   {
     "id": "SUR",
@@ -1142,7 +1142,7 @@ export const composite = [
     "economy": 4,
     "inequality": 2,
     "unemployment": 28,
-    "index": 5
+    "index": 24
   },
   {
     "id": "SVK",
@@ -1151,7 +1151,7 @@ export const composite = [
     "economy": 25,
     "inequality": 100,
     "unemployment": 47,
-    "index": 71
+    "index": 61
   },
   {
     "id": "SVN",
@@ -1160,7 +1160,7 @@ export const composite = [
     "economy": 82,
     "inequality": 99,
     "unemployment": 74,
-    "index": 100
+    "index": 84
   },
   {
     "id": "SWE",
@@ -1169,7 +1169,7 @@ export const composite = [
     "economy": 54,
     "inequality": 86,
     "unemployment": 35,
-    "index": 85
+    "index": 74
   },
   {
     "id": "SWZ",
@@ -1178,7 +1178,7 @@ export const composite = [
     "economy": 79,
     "inequality": 4,
     "unemployment": 2,
-    "index": 12
+    "index": 33
   },
   {
     "id": "TCD",
@@ -1187,7 +1187,7 @@ export const composite = [
     "economy": 6,
     "inequality": 43,
     "unemployment": 95,
-    "index": 20
+    "index": 29
   },
   {
     "id": "TGO",
@@ -1196,7 +1196,7 @@ export const composite = [
     "economy": 59,
     "inequality": 23,
     "unemployment": 80,
-    "index": 40
+    "index": 42
   },
   {
     "id": "THA",
@@ -1205,7 +1205,7 @@ export const composite = [
     "economy": 14,
     "inequality": 57,
     "unemployment": 98,
-    "index": 57
+    "index": 48
   },
   {
     "id": "TJK",
@@ -1214,7 +1214,7 @@ export const composite = [
     "economy": 86,
     "inequality": 64,
     "unemployment": 40,
-    "index": 52
+    "index": 46
   },
   {
     "id": "TLS",
@@ -1223,7 +1223,7 @@ export const composite = [
     "economy": 48,
     "inequality": 89,
     "unemployment": 64,
-    "index": 77
+    "index": 61
   },
   {
     "id": "TTO",
@@ -1232,7 +1232,7 @@ export const composite = [
     "economy": 6,
     "inequality": 33,
     "unemployment": 70,
-    "index": 27
+    "index": 40
   },
   {
     "id": "TUN",
@@ -1241,7 +1241,7 @@ export const composite = [
     "economy": 30,
     "inequality": 70,
     "unemployment": 10,
-    "index": 32
+    "index": 47
   },
   {
     "id": "TUR",
@@ -1250,7 +1250,7 @@ export const composite = [
     "economy": 92,
     "inequality": 27,
     "unemployment": 20,
-    "index": 44
+    "index": 51
   },
   {
     "id": "TZA",
@@ -1259,7 +1259,7 @@ export const composite = [
     "economy": 46,
     "inequality": 32,
     "unemployment": 91,
-    "index": 60
+    "index": 51
   },
   {
     "id": "UGA",
@@ -1268,7 +1268,7 @@ export const composite = [
     "economy": 31,
     "inequality": 22,
     "unemployment": 88,
-    "index": 25
+    "index": 34
   },
   {
     "id": "UKR",
@@ -1277,7 +1277,7 @@ export const composite = [
     "economy": 32,
     "inequality": 96,
     "unemployment": 34,
-    "index": 47
+    "index": 46
   },
   {
     "id": "URY",
@@ -1286,7 +1286,7 @@ export const composite = [
     "economy": 48,
     "inequality": 34,
     "unemployment": 28,
-    "index": 51
+    "index": 56
   },
   {
     "id": "USA",
@@ -1295,7 +1295,7 @@ export const composite = [
     "economy": 63,
     "inequality": 28,
     "unemployment": 57,
-    "index": 68
+    "index": 63
   },
   {
     "id": "UZB",
@@ -1304,7 +1304,7 @@ export const composite = [
     "economy": 78,
     "inequality": 54,
     "unemployment": 44,
-    "index": 43
+    "index": 44
   },
   {
     "id": "VNM",
@@ -1313,7 +1313,7 @@ export const composite = [
     "economy": 22,
     "inequality": 52,
     "unemployment": 94,
-    "index": 55
+    "index": 48
   },
   {
     "id": "VUT",
@@ -1322,7 +1322,7 @@ export const composite = [
     "economy": 8,
     "inequality": 74,
     "unemployment": 93,
-    "index": 69
+    "index": 56
   },
   {
     "id": "YEM",
@@ -1331,7 +1331,7 @@ export const composite = [
     "economy": 4,
     "inequality": 48,
     "unemployment": 19,
-    "index": 3
+    "index": 15
   },
   {
     "id": "ZAF",
@@ -1340,7 +1340,7 @@ export const composite = [
     "economy": 56,
     "inequality": 0,
     "unemployment": 0,
-    "index": 12
+    "index": 37
   },
   {
     "id": "ZMB",
@@ -1349,6 +1349,103 @@ export const composite = [
     "economy": 34,
     "inequality": 2,
     "unemployment": 20,
-    "index": 8
+    "index": 24
   }
 ]
+
+var percentile = (arr, val) => {
+  let count = 0;
+  arr.forEach(v => {
+    if (v < val) {
+      count++;
+    } else if (v == val) {
+      count += 0.5;
+    }
+  });
+  return 100 * count / arr.length;
+}
+
+var total_scores = [ 68, 227, 273, 197, 237, 232, 277, 230, 154, 305, 265, 208, 223, 198, 195, 259, 154, 125, 209, 182, 78, 253, 263, 228, 249, 247, 139, 152, 20, 162, 72, 191, 176, 270, 291, 279, 93, 314, 186, 193, 157, 168, 220, 306, 249, 263, 272, 85, 304, 252, 213, 183, 181, 147, 236, 185, 182, 151, 279, 50, 300, 196, 246, 315, 82, 133, 282, 268, 228, 161, 160, 264, 246, 184, 287, 180, 103, 194, 163, 179, 86, 231, 292, 229, 189, 309, 174, 300, 174, 157, 141, 324, 194, 215, 166, 114, 138, 206, 134, 201, 97, 185, 132, 166, 320, 295, 214, 256, 165, 229, 216, 147, 311, 257, 129, 251, 197, 282, 80, 255, 210, 171, 225, 82, 208, 127, 81, 241, 336, 273, 118, 150, 185, 210, 201, 254, 162, 173, 192, 216, 158, 195, 198, 233, 191, 209, 235, 72, 119, 89 ];
+
+var country_array = [];
+
+function percentile_index(composite, scores) {
+  var country_array = [];
+  var number = 0;
+  for (var d in composite) { 
+    composite[d].index = Math.round(percentile(total_scores, scores[number]));
+    country_array.push(composite);
+    number++;
+  }
+  return country_array;
+}
+
+var country_indexes = percentile_index(composite, total_scores);
+
+console.log(country_indexes);
+
+
+  for (var i in composite) {
+    var country_total = composite[i].corruption + composite[i].economy + 
+    composite[i].inequality + composite[i].unemployment;
+    total_scores.push(country_total);
+  }
+
+  console.log(Math.round(total_scores));
+
+  var total_scores = 0;
+
+  for (var i in composite) { 
+    total_scores += composite[i].corruption + composite[i].economy + 
+    composite[i].inequality + composite[i].unemployment;
+  }
+  
+  
+
+var percentile = (arr, val) => {
+    let count = 0;
+    arr.forEach(v => {
+      if (v < val) {
+        count++;
+      } else if (v == val) {
+        count += 0.5;
+      }
+    });
+    return 100 * count / arr.length;
+  }
+
+  var reverse_percentile = (arr, val) => {
+    let count = 0;
+    arr.forEach(v => {
+      if (v < val) {
+        count++;
+      } else if (v == val) {
+        count += 0.5;
+      }
+    });
+    return 100 - (100 * count / arr.length);
+  }
+
+  // total scores: 23,779
+  // average per country: 159
+
+  index_array  = [];
+
+  for (var z in composite) {
+    index_array.push(composite[z].unemployment)
+    return Math.round(percentile());
+  }
+  
+  for (var j in composite) {
+    var c_percentile = reverse_percentile(index_array, composite[j].unemployment);
+    composite[j].unemployment = Math.round(c_percentile);
+  }
+
+  console.log(composite);
+
+var total_scores = [ 68, 227, 273, 197, 237, 232, 277, 230, 154, 305, 265, 208, 223, 198, 195, 259, 154, 125, 209, 182, 78, 253, 263, 228, 249, 247, 139, 152, 20, 162, 72, 191, 176, 270, 291, 279, 93, 314, 186, 193, 157, 168, 220, 306, 249, 263, 272, 85, 304, 252, 213, 183, 181, 147, 236, 185, 182, 151, 279, 50, 300, 196, 246, 315, 82, 133, 282, 268, 228, 161, 160, 264, 246, 184, 287, 180, 103, 194, 163, 179, 86, 231, 292, 229, 189, 309, 174, 300, 174, 157, 141, 324, 194, 215, 166, 114, 138, 206, 134, 201, 97, 185, 132, 166, 320, 295, 214, 256, 165, 229, 216, 147, 311, 257, 129, 251, 197, 282, 80, 255, 210, 171, 225, 82, 208, 127, 81, 241, 336, 273, 118, 150, 185, 210, 201, 254, 162, 173, 192, 216, 158, 195, 198, 233, 191, 209, 235, 72, 119, 89 ]
+
+
+
+
+
