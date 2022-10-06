@@ -4,7 +4,6 @@ Global Existential Index Factors
 Global Prosperity Index
 
 ECONOMIC
-
 GDP Growth
 Current Account Deficit
 Public Debt
@@ -20,9 +19,7 @@ Wage Growth
 Interest Rate
   -rising is better than falling
 
-
 SOCIAL
-
 Quality of Life Index
 Life Satisfaction - BLI
 Life Expectancy
@@ -36,16 +33,12 @@ Housing Affordability - BLI
 Knowledge and Skills - BLI
 Subjective Well-Being
 
-
-
 ENVIRONMENTAL
-
 Pollution
-
+Sea Levels
+Alternative Energy
 
 BLI - Better Life Initiative - OECD
-
-
 
 
 

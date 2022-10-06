@@ -30,7 +30,7 @@ function About() {
         <table id="about-table">
           <tbody>
             <tr>
-              <th id="area-header">Area</th>
+              <th id="area-header">Indicator</th>
               <th id="measure-header">Measure</th>
               <th id="source-header">Source</th>
               <th>Polling %</th>

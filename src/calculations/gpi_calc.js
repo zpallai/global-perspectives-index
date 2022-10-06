@@ -1240,23 +1240,18 @@ for (var i in composite) {
 console.log(arrayList);
 
 
-
-
-
-  
-
-// for (var j in composite) {
-//     console.log(composite[j].title);
-//     console.log("corruption: " + composite[j].corruption);
-//     console.log("economy: " + composite[j].economy);
-//     console.log("inequality: " + composite[j].inequality);
-//     console.log("unemployment: " + composite[j].unemployment);
-//     total_composite = composite[j].corruption + composite[j].economy + 
-//     composite[j].inequality + composite[j].unemployment;
-//     console.log("Total Index: " + total_composite);
-//     console.log("Final Index: " + total_composite/4);
-//     console.log("\n\n");
-// }
+for (var j in composite) {
+    console.log(composite[j].title);
+    console.log("corruption: " + composite[j].corruption);
+    console.log("economy: " + composite[j].economy);
+    console.log("inequality: " + composite[j].inequality);
+    console.log("unemployment: " + composite[j].unemployment);
+    total_composite = composite[j].corruption + composite[j].economy + 
+    composite[j].inequality + composite[j].unemployment;
+    console.log("Total Index: " + total_composite);
+    console.log("Final Index: " + total_composite/4);
+    console.log("\n\n");
+}
 
 
 

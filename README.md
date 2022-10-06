@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# GLOBAL PERSPECTIVES INDEX
+#### Video Demo:  <https://youtu.be/Gqyl3O0oQXc>
+#### Description: A web app built with React that creates a unique global performative index.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Outline
+- App Intro
+- Framework
+- Libraries
+- Design Choices
+- Project Files
+- About
 
-## Available Scripts
+## App Intro
+The **Global Perspectives Index (GPI)** departs from traditional, quantitative analyses of social and economic performance by ranking countries based on a [Gallup poll]("https://www.gallup-international.com/survey-results/survey-result/worlds-most-important-problem") that asked the international community a question: 
 
-In the project directory, you can run:
+**"What do you think is the most important problem facing the world today?"**
 
-### `npm start`
+The GPI takes the top four areas of concern: corruption, economy, inequality and unemployment, considering each according to its perceived importance. Each indicator is weighted based on polling strenghth, resulting in the final composite index. All values are represented as percentiles, with higher scores reflecting better performance, and all columns can be sorted by rank. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Framework
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The GPI app was written in Javascript, HTML (JSX) & CSS with React. React was an attractive choice because it is a leading front-end framework and presented the challenge of adapting to a new modality for web development.
 
-### `npm test`
+`create-react-app` was used to quickly deploy GPI with the necessary dependencies. `npm start` provided a live, local server that allowed for quick editing and development feedback. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Libraries 
 
-### `npm run build`
+Besides the included dependencies and React utilities such as `nvm` and `npm`, the web app utilizies [react-table](https://tanstack.com/table/v8), also known as "TanStack Table." react-table is a Headless UI, which allowed for customization and control over styling. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The most important features of react-table for this use case were responsiveness, ability to work with JSON data, as well as searching and sorting. The search capability provides easy access to the 150 countries in the index, and the sorting plays into the ranking aspect of the index, allowing the user to see the best and worst performers not just for the final GPI but also for each indicator. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Design Choices
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The first inspiration was to create an index that sourced and manipulated complex data, based on indicators important today. Initial research revealed a plethora of such indeces, almost all based on quantitative data. 
 
-### `npm run eject`
+A unique opportunity presented itself with the Gallup Poll: to use individual "perspectives" as to the importance of issues to the global community as a starting point to deterine a nation's performance. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To make the scores easier to understand, data in a variety of forms was converted to percentiles, with higher marks reflecting positively. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Initially a thought was to allow a user to click on any country, revealing the data associated with the country (and perhaps a national flag), but this became redundant with the table search capability. Preference was given to a clear and organized introductory section with a table explaining the index system. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Files
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Sources
 
-## Learn More
+The project sources and initial datasets are found in the [research](./public/research/) folder. Here are included the Gallup Poll, a library devoted to the gini index as well as the .csv and .json files with the raw GPI data. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Versions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project developer has a habit of both using version control and squirelling away rought drafts just in case. Those can be found in the [versions](./src/versions/) folder. 
 
-### Code Splitting
+### Datasets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Most of the data was sourced from the [World Bank API](https://data.worldbank.org), which provides downloads in .csv format. Since react-table works with Javascript objects, the .csvs had to be converted to .json and then filtered for the relavent data. This was primarily done with the online tool [convertcsv](https://www.convertcsv.com/csv-to-json.htm). 
 
-### Analyzing the Bundle Size
+There are three properties for each .json object: the ISO3 code for a given country, which acted as the key for the datasets, the country name, and the values for each set. The [datasets](./src/datasets/) folder contains the final percentiles for each indicator as well as the composite index .json, which the table imports and references. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Calculations 
 
-### Making a Progressive Web App
+A lot of data cleaning was required to create a percentile score for each indicator, as well as the final GPI, for each country. The folder [calculations](./src/calculations/) contains three files that were used in three phases to produce the final indeces:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Merging
 
-### Advanced Configuration
+Once the datasets above were compiled, each keyed to the ISO3 codes, an object for each country with all of the indicators was generated with [merging.js](./src/calculations/merging.js). Here, the composite array of already compiled indicators was paired with the next indicator. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+First, an array was initiliazed that would hold all of the new country objects. Next, an object was created for each country with the existing indicators, setting the new indicator to null. Finally, the new indicator array was parsed, setting the country's property for the indicator and pushing to the master array. These steps were repeated for each indicator until the country objects held the full dataset. 
 
-### Deployment
+#### Percentile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Two functions were created within [percentile.js](./src/calculations/percentile.js) to calculate an indicator's percentile rank compared to all the other country indicator scores. Economy, a positive indicator, went through the regular percentile() function, whereas corruption, inequality and unemployment, negative indicators, went through the reverse_percentile() function. The scores were rounded to the integer and new country objects with the percentile scores were created. 
 
-### `npm run build` fails to minify
+#### GPI Calc
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The last step to assemble composite index involved adjusting the percentile scores based on the weights from the Gallup poll. A function called index_weighting() in [gpi_calc](./src/calculations/gpi_calc.js) takes in all of the indicator percentiles and produces a final GPI index. One more iteration of the array of objects adds the GPI index to the collection of country scores.  
+
+## About
+
+This web app was created by Zoltan Pallai as the final project for Harvard CS50x: Introduction to Computer Science. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
