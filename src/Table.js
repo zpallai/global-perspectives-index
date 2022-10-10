@@ -1,5 +1,5 @@
 // Table
-import React, { useMemo, useState, useEffect, useFlexLayout } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import TableTemplate from "./TableTemplate"
 import { composite } from './Composite';
 

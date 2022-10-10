@@ -1,21 +1,15 @@
 import React, { useState } from "react";
-import { useTable, useFilters, useSortBy, getHeaderProps } from "react-table";
+import { useTable, useFilters, useSortBy } from "react-table";
 
 export default function TableTemplate({ columns, data }) {
   const [filterInput, setFilterInput] = useState("");
-  // Use the state and functions returned from useTable to build your UI
   const {
     getTableProps,
-    getHeaderProps,
     getTableBodyProps,
-    getCellProps,
     headerGroups,
     rows,
     prepareRow,
-    setFilter,
-    useResizeColumns,
-    useFlexLayout,
-    useRowSelect
+    setFilter
   } = useTable(
     {
       columns,
@@ -31,7 +25,6 @@ export default function TableTemplate({ columns, data }) {
     setFilterInput(value);
   };
 
-  // Render the UI for your table
   return (
     <>
       <input
@@ -45,7 +38,7 @@ export default function TableTemplate({ columns, data }) {
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
-                <th
+                <th id="table-head"
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   className={
                     column.isSorted
@@ -56,10 +49,12 @@ export default function TableTemplate({ columns, data }) {
                   }
                 >
                   {column.render("Header")}
+                  
                 </th>
               ))}
             </tr>
           ))}
+          
         </thead>
         <tbody {...getTableBodyProps()}>
           {rows.map((row, i) => {

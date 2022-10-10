@@ -2,13 +2,8 @@
 
 body {
   font-family:'Roboto', monospace;
-  background-color: #89a5bd26;
+  background-color: #e6edf3;
 }
-
-/* body > iframe
-{
-    display: none;
-} */
 
 .App {
   text-align: start;
@@ -29,7 +24,6 @@ body {
 #title-line {
   padding: 0rem;
   margin: 0rem;
-  /* width: 95%; */
 }
 
 .Table {
@@ -54,6 +48,13 @@ table {
 
 #area-header {
   width: 200px;
+}
+
+#table-head {
+  background-color: #e6edf3;
+  position: fixed;
+  position: sticky;
+  top: 0;
 }
 
 th {
@@ -92,55 +93,14 @@ thead tr th {
   width: 300px;
 }
 
-.country-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.country-info {
-  display: grid;
-  /* flex-grow: 1; */
-  row-gap: 5px;
-  grid-template-areas: 
-  'country-name country-flag'
-  'country-plot country-plot';
-}
-
-.country-name {
-  grid-area: country-name;
-  font-size: 2rem;
-  margin: auto 1rem;
-}
-
-.country-flag {
-  grid-area: country-flag;
-  justify-self: end;
-  margin-top: 0.4rem;
-  width: 80px;
-}
-
-.country-plot {
-  grid-area: country-plot;
-}
-
-.country-score {
-  grid-area: country-score;
-  font-size: 2rem;
-  margin: auto;
-}
-
-.country-indexes {
-  flex-grow: 1;
-  font-size: 1.3rem;
-  margin: 1rem 0rem 0rem 3rem;
-  line-height: 50px;
-}
-
 hr {
   width: 100%;
 }
 
-
+/* body > iframe
+{
+    display: none;
+} */
 
 
 

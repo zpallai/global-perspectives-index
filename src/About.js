@@ -9,7 +9,7 @@ function About() {
     <div className="about-container">
         <p className="about-intro">
             The Global Perspectives Index (GPI) departs from traditional, quantitative analyses of 
-            social and economic performance by ranking countries based on a <a href="https://www.gallup-international.com/survey-results/survey-result/worlds-most-important-problem">
+            social and economic performance by ranking countries based on a <a href="https://www.gallup-international.bg/en/32507/corruption-tops-the-list-as-the-worlds-most-important-problem-according-to-win-gallup-internationals-annual-poll/">
             Gallup poll</a> that asked 
             the international community a question: 
         </p>

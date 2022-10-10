@@ -1,27 +1,29 @@
-# GLOBAL PERSPECTIVES INDEX
-#### Video Demo:  <https://youtu.be/Gqyl3O0oQXc>
-#### Description: A web app built with React that creates a unique global performative index.
+# Global Perspectives Index (GPI)
+[Video Demo](https://youtu.be/Gqyl3O0oQXc)
 
 ## Outline
-- App Intro
+- About
 - Framework
 - Libraries
-- Design Choices
 - Project Files
-- About
 
-## App Intro
-The **Global Perspectives Index (GPI)** departs from traditional, quantitative analyses of social and economic performance by ranking countries based on a [Gallup poll]("https://www.gallup-international.com/survey-results/survey-result/worlds-most-important-problem") that asked the international community a question: 
+## About
 
-**"What do you think is the most important problem facing the world today?"**
+The Global Perspectives Index (GPI) is web app that calculates and tabulates a unique indicator-based evaluation of 150 countries.
 
-The GPI takes the top four areas of concern: corruption, economy, inequality and unemployment, considering each according to its perceived importance. Each indicator is weighted based on polling strenghth, resulting in the final composite index. All values are represented as percentiles, with higher scores reflecting better performance, and all columns can be sorted by rank. 
+The first inspiration was to create an index that sourced and manipulated complex data, based on issues important today. Initial research revealed a plethora of such indeces, almost all based on quantitative data. 
+
+A unique opportunity presented itself with a [Gallup Poll:](https://www.gallup-international.bg/en/32507/corruption-tops-the-list-as-the-worlds-most-important-problem-according-to-win-gallup-internationals-annual-poll/) to use individual "perspectives" as to the importance of issues to the global community as a starting point to deterine a nation's performance. 
+
+To make the scores easier to understand, data in a variety of forms was converted to percentiles, with higher marks reflecting positively. The countries are searchable and all indicators are sortable.
+
+GPI was developed by Zoltan Pallai.
 
 ## Framework
 
-The GPI app was written in Javascript, HTML (JSX) & CSS with React. React was an attractive choice because it is a leading front-end framework and presented the challenge of adapting to a new modality for web development.
+The GPI app was written in Javascript, HTML (JSX) & CSS with React.
 
-`create-react-app` was used to quickly deploy GPI with the necessary dependencies. `npm start` provided a live, local server that allowed for quick editing and development feedback. 
+`create-react-app` was used to quickly deploy GPI with the necessary dependencies. `npm start` provides a live, local server that allowed for quick editing and development feedback. 
 
 ## Libraries 
 
@@ -29,25 +31,7 @@ Besides the included dependencies and React utilities such as `nvm` and `npm`, t
 
 The most important features of react-table for this use case were responsiveness, ability to work with JSON data, as well as searching and sorting. The search capability provides easy access to the 150 countries in the index, and the sorting plays into the ranking aspect of the index, allowing the user to see the best and worst performers not just for the final GPI but also for each indicator. 
 
-## Design Choices
-
-The first inspiration was to create an index that sourced and manipulated complex data, based on indicators important today. Initial research revealed a plethora of such indeces, almost all based on quantitative data. 
-
-A unique opportunity presented itself with the Gallup Poll: to use individual "perspectives" as to the importance of issues to the global community as a starting point to deterine a nation's performance. 
-
-To make the scores easier to understand, data in a variety of forms was converted to percentiles, with higher marks reflecting positively. 
-
-Initially a thought was to allow a user to click on any country, revealing the data associated with the country (and perhaps a national flag), but this became redundant with the table search capability. Preference was given to a clear and organized introductory section with a table explaining the index system. 
-
 ## Project Files
-
-### Sources
-
-The project sources and initial datasets are found in the [research](./public/research/) folder. Here are included the Gallup Poll, a library devoted to the gini index as well as the .csv and .json files with the raw GPI data. 
-
-### Versions
-
-The project developer has a habit of both using version control and squirelling away rought drafts just in case. Those can be found in the [versions](./src/versions/) folder. 
 
 ### Datasets
 
@@ -73,9 +57,7 @@ Two functions were created within [percentile.js](./src/calculations/percentile.
 
 The last step to assemble composite index involved adjusting the percentile scores based on the weights from the Gallup poll. A function called index_weighting() in [gpi_calc](./src/calculations/gpi_calc.js) takes in all of the indicator percentiles and produces a final GPI index. One more iteration of the array of objects adds the GPI index to the collection of country scores.  
 
-## About
-
-This web app was created by Zoltan Pallai as the final project for Harvard CS50x: Introduction to Computer Science. 
+### Thanks for reading the GPI Docs!
 
 
 
