@@ -1,4 +1,7 @@
 # Global Perspectives Index (GPI)
+
+[Visit Site](https://global-perspectives-index.netlify.app)
+
 [Video Demo](https://youtu.be/Gqyl3O0oQXc)
 
 ## Outline
